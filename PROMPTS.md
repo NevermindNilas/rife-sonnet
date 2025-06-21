@@ -220,3 +220,64 @@ Additionally, add a .gitignore file that includes all entries relevant to Python
     *.log, *.pth, etc.
 
 Let me know if you'd like a generated .gitignore or README.md template to start from.
+
+----------------------
+
+PROMPT 6:
+
+Excellent work so far, Sonnet.
+
+Now, I have a new challenge for you. You've done great optimizing RIFE 4.6, but it's time to shift focus to RIFE 4.25. Here's what you'll need:
+
+    Architecture code: F:\rife-sonnet\rife4.25.py
+
+    Model weights: F:\rife-sonnet\rife425.pth
+
+Objectives:
+
+    Replicate and extend the same level of performance and quality improvements you achieved with RIFE 4.6:
+
+        FP32 and FP16 baseline benchmarking
+
+        Optimized inference workflows
+
+        Output consistency analysis
+
+    Apply and explore additional optimizations, including but not limited to:
+
+        torch.channels_last memory format
+
+        torch.cuda.amp.autocast() for FP16
+
+        torch.backends.cudnn.benchmark = True
+
+        Caching img0 (first input frame)
+
+        Caching flow tensors (if reused)
+
+        Efficient memory handling, tensor reuse, and CUDA execution improvements
+
+    Ensure model compatibility is preserved:
+
+        Do not modify the model architecture
+
+        All changes must remain fully compatible with rife425.pth
+
+Deliverables:
+
+    Unified benchmarking script that can benchmark both RIFE 4.6 and RIFE 4.25
+
+    Updated README.md that includes:
+
+        Benchmark results and gains for both versions
+
+        Optimization techniques used
+
+        How to run benchmarks for either version
+
+        Notes on precision trade-offs (FP32 vs FP16)
+
+        Observed output consistency and accuracy metrics
+
+    Updated .gitignore for Python environments (if not already done)
+
