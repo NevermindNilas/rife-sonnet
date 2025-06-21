@@ -413,11 +413,7 @@ class RIFEBenchmark:
             for i in range(min(num_test_frames, len(frames) - 1)):
                 img0 = frames[i].unsqueeze(0).to(self.device)
                 img1 = frames[i + 1].unsqueeze(0).to(self.device)
-                timestep = (
-                    torch.tensor([0.5], device=self.device)
-                    .view(1, 1, 1, 1)
-                    .expand(1, 1, img0.shape[2], img0.shape[3])
-                )
+                timestep = torch.tensor([0.5], device=self.device).view(1, 1, 1, 1)
 
                 # Get outputs from both models
                 output_baseline = model_baseline(img0, img1, timestep)
